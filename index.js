@@ -531,6 +531,115 @@
 
 //BACK TO THE GAME
 
+
+
+
+// let cards = []
+// let sum = 0
+// let hasBlackJack = false 
+// isAlive = false 
+// let message = ""
+// let messageEl = document.getElementById("message-el")
+// let sumEl = document.querySelector("#sum-el")
+// let cardsEl = document.querySelector("#cards-el")
+
+// //Now if 1 --> return 11
+// //Now if 11-13 ---> return 10
+
+// function getRandomCard() {
+//     let randomNumber = Math.floor(Math.random() * 13) + 1
+//     if(randomNumber === 1) {
+//         return 11
+//     } else if  (randomNumber>10) {
+//         return 10
+//     } else {
+//     return randomNumber
+//     }
+// }
+// function startGame() { //Everything should start working on clicking start button
+//     //also person is alive when he hits start button
+//     isAlive = true
+//     let firstCard =getRandomCard() 
+//     let secondCard =getRandomCard() 
+//     cards = [firstCard,secondCard]
+//     sum = firstCard + secondCard 
+//     renderGame()
+// }
+// function renderGame() {
+//     sumEl.textContent = "Sum: " + sum
+//     cardsEl.textContent =  "Cards: "
+//     for(let i=0 ; i<cards.length ; i++) {
+//         cardsEl.textContent += cards[i] + " "
+//     }
+//     if(sum <= 20) {
+//         message = "Do you want to draw new card ? "
+//     } else if(sum === 21) {
+//         message = "Wohoo ! you have got Blackjack !"
+//         hasBlackJack = true
+//     } else {
+//         message = "You are out of the game !"
+//         isAlive = false
+//     }
+//     messageEl.textContent = message
+// }
+
+// function newCard() { 
+//     let thirdCard = getRandomCard()  
+//     sum += thirdCard
+//     cards.push(thirdCard)
+//     renderGame()
+// }
+
+
+
+// //LOGICAL AND OPERATOR
+
+// let hasCompletedCourse = true
+// let givesCertificate =true
+
+// //We want that function should only work if above two conditions are true
+
+// if( hasCompletedCourse === true && givesCertificate === true) { 
+// generateCertificate()
+// }
+// function generateCertificate() {
+//     console.log("Generating certificate....")
+// }
+ 
+// let hasSolvedChallenge = false
+// let hasHintsLeft =false
+
+// // Create an if statement that checks that both variables are false.
+// // If so, run the showSolution() function
+
+// if(hasSolvedChallenge== false && hasHintsLeft==false) {
+//     showSolution()
+// }
+// function showSolution() {
+//     console.log("Showing the solution....")
+// }
+
+// //LOGICAL OR OPERATOR
+
+// // Create two boolean variables, likesDocumentaries and likesStartups
+// // Use an OR statement (||) to call recommendMovie() if either of those variables are true
+
+// let likesDocumentries =  true
+// let likesStartups = false
+// if(likesDocumentries == true || likesStartups == true) {
+//     recommendMovie()
+// }
+// function recommendMovie() {
+//     console.log("Hey, check out this new film we think you will like!")
+// }
+
+
+
+//BACK TO THE GAME
+
+
+
+
 let cards = []
 let sum = 0
 let hasBlackJack = false 
@@ -539,9 +648,6 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#cards-el")
-
-//Now if 1 --> return 11
-//Now if 11-13 ---> return 10
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
@@ -553,8 +659,7 @@ function getRandomCard() {
     return randomNumber
     }
 }
-function startGame() { //Everything should start working on clicking start button
-    //also person is alive when he hits start button
+function startGame() {
     isAlive = true
     let firstCard =getRandomCard() 
     let secondCard =getRandomCard() 
@@ -581,52 +686,10 @@ function renderGame() {
 }
 
 function newCard() { 
+    if(hasBlackJack==false && isAlive == true) {
     let thirdCard = getRandomCard()  
     sum += thirdCard
     cards.push(thirdCard)
     renderGame()
+    }
 }
-
-
-
-//LOGICAL AND OPERATOR
-
-let hasCompletedCourse = true
-let givesCertificate =true
-
-//We want that function should only work if above two conditions are true
-
-if( hasCompletedCourse === true && givesCertificate === true) { 
-generateCertificate()
-}
-function generateCertificate() {
-    console.log("Generating certificate....")
-}
- 
-let hasSolvedChallenge = false
-let hasHintsLeft =false
-
-// Create an if statement that checks that both variables are false.
-// If so, run the showSolution() function
-
-if(hasSolvedChallenge== false && hasHintsLeft==false) {
-    showSolution()
-}
-function showSolution() {
-    console.log("Showing the solution....")
-}
-
-//LOGICAL OR OPERATOR
-
-// Create two boolean variables, likesDocumentaries and likesStartups
-// Use an OR statement (||) to call recommendMovie() if either of those variables are true
-
-let likesDocumentries =  true
-let likesStartups = false
-if(likesDocumentries == true || likesStartups == true) {
-    recommendMovie()
-}
-function recommendMovie() {
-    console.log("Hey, check out this new film we think you will like!")
-}
-

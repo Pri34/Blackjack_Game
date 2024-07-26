@@ -640,6 +640,120 @@
 
 
 
+// let cards = []
+// let sum = 0
+// let hasBlackJack = false 
+// isAlive = false 
+// let message = ""
+// let messageEl = document.getElementById("message-el")
+// let sumEl = document.querySelector("#sum-el")
+// let cardsEl = document.querySelector("#cards-el")
+
+// let player = {
+//     name : "Prisha" ,
+//     chips :  130
+// }
+
+// let playerEl = document.querySelector("#player-el")
+// playerEl.textContent = player.name + ": $" + player.chips
+
+// function getRandomCard() {
+//     let randomNumber = Math.floor(Math.random() * 13) + 1
+//     if(randomNumber === 1) {
+//         return 11
+//     } else if  (randomNumber>10) {
+//         return 10
+//     } else {
+//     return randomNumber
+//     }
+// }
+// function startGame() {
+//     isAlive = true
+//     let firstCard =getRandomCard() 
+//     let secondCard =getRandomCard() 
+//     cards = [firstCard,secondCard]
+//     sum = firstCard + secondCard 
+//     renderGame()
+// }
+// function renderGame() {
+//     sumEl.textContent = "Sum: " + sum
+//     cardsEl.textContent =  "Cards: "
+//     for(let i=0 ; i<cards.length ; i++) {
+//         cardsEl.textContent += cards[i] + " "
+//     }
+//     if(sum <= 20) {
+//         message = "Do you want to draw new card ? "
+//     } else if(sum === 21) {
+//         message = "Wohoo ! you have got Blackjack !"
+//         hasBlackJack = true
+//     } else {
+//         message = "You are out of the game !"
+//         isAlive = false
+//     }
+//     messageEl.textContent = message
+// }
+
+// function newCard() { 
+//     if(hasBlackJack==false && isAlive == true) {
+//     let thirdCard = getRandomCard()  
+//     sum += thirdCard
+//     cards.push(thirdCard)
+//     renderGame()
+//     }
+// }
+
+
+
+// //INTRODUCTION TO OBJECTS
+
+
+
+// // Objects - store data in-depth - composite / complex data type
+// // key-value pairs
+
+// let course = {
+//     title : "Learn  Css Grid for free",
+//     lessons : 16,
+//     creator : "Prisha Aggarwal",
+//     length : 63,   //time
+//     level : 2,     //intermediate
+//     isFree : true ,
+//     tags : ["html" , "css"]
+// }
+
+// console.log(course.length)
+// console.log(course.tags)
+
+// // Create an object that represents an airbnb castle listing.
+// // It should contain at least one boolean, one string, one number, and one array
+// // Log out at least two of the keys using the dot notation
+
+// let airbnbCastle = {
+//     location : "Europe",
+//     cost : 120 ,
+//     mealFree : true ,
+//     roomType : ["single" , "double", "kingSize"]
+// }
+
+// console.log(airbnbCastle.location)
+// console.log(airbnbCastle.cost)
+
+
+
+
+//BACK TO THE GAME
+
+
+let player = {
+    name : "Prisha" ,
+    chips :  130,
+    // sayHello : function() {
+    //     console.log("Hi prisha")
+    // }
+}
+
+// player.sayHello()
+
 let cards = []
 let sum = 0
 let hasBlackJack = false 
@@ -648,6 +762,9 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#cards-el")
+
+let playerEl = document.querySelector("#player-el")
+playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
